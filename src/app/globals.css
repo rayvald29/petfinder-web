@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* BACKGROUNDS & BORDERS */
+  --background: #0a0c10;       
+  --foreground: #f5f7fa;
+  --pf-bg-base: #0a0c10;       
+  --pf-bg-surface: #12151b;    
+  --pf-bg-surface-2: #181c24;  
+  --pf-bg-elevated: #1f2430;   
+  --pf-border: #262b36;        
+  --pf-border-strong: #343b49; 
+
+  /* TEXTO */
+  --pf-text-primary: #f5f7fa;
+  --pf-text-secondary: #9aa3b2;
+  --pf-text-tertiary: #5b6473;
+
+  /* ACENTOS Y ESTADOS */
+  --pf-emerald: #22e6a1;
+  --pf-emerald-strong: #16c98c;
+  --pf-emerald-soft: rgba(34, 230, 161, 0.12);
+  --pf-status-lost: #f5454f;       
+  --pf-status-lost-soft: rgba(245, 69, 79, 0.14);
+  --pf-status-searching: #f5b942;  
+  --pf-status-searching-soft: rgba(245, 185, 66, 0.14);
+  --pf-status-sighting: #3aa7ff;   
+  --pf-status-sighting-soft: rgba(58, 167, 255, 0.14);
+  --pf-status-found: #22e6a1;      
+
+  /* RADIOS Y SOMBRAS */
+  --pf-radius-sm: 8px;
+  --pf-radius-md: 12px;
+  --pf-radius-lg: 20px;
+  --pf-shadow-card: 0 8px 30px rgba(0, 0, 0, 0.35);
+  --pf-shadow-glow: 0 0 0 1px rgba(34, 230, 161, 0.25), 0 0 24px rgba(34, 230, 161, 0.15);
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* MAPEO A CLASES DE TAILWIND (v4) */
+  --color-bg-base: var(--pf-bg-base);
+  --color-bg-surface: var(--pf-bg-surface);
+  --color-bg-surface2: var(--pf-bg-surface-2);
+  --color-bg-elevated: var(--pf-bg-elevated);
+  --color-pf-border: var(--pf-border);
+  --color-pf-border-strong: var(--pf-border-strong);
+  --color-text-primary: var(--pf-text-primary);
+  --color-text-secondary: var(--pf-text-secondary);
+  --color-text-tertiary: var(--pf-text-tertiary);
+  --color-emerald-base: var(--pf-emerald);
+  --color-emerald-strong: var(--pf-emerald-strong);
+  --color-emerald-soft: var(--pf-emerald-soft);
+  --color-status-lost: var(--pf-status-lost);
+  --color-status-lost-soft: var(--pf-status-lost-soft);
+  --color-status-searching: var(--pf-status-searching);
+  --color-status-searching-soft: var(--pf-status-searching-soft);
+  --color-status-sighting: var(--pf-status-sighting);
+  --color-status-sighting-soft: var(--pf-status-sighting-soft);
+  --color-status-found: var(--pf-status-found);
+  --radius-pf-sm: var(--pf-radius-sm);
+  --radius-pf-md: var(--pf-radius-md);
+  --radius-pf-lg: var(--pf-radius-lg);
+  --shadow-pf-card: var(--pf-shadow-card);
+  --shadow-pf-glow: var(--pf-shadow-glow);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
